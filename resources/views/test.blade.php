@@ -1,2 +1,2 @@
 ini dari pak maja
-ini dari oliver
+ini dari olivers
