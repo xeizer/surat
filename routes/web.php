@@ -19,4 +19,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/masuk', [App\Http\Controllers\surat\SuratController::class, 'masuk']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\surat\SuratController::class, 'dashboard']);
+Route::get('/suratmasuk', [App\Http\Controllers\surat\SuratController::class, 'suratmasuk']);
+Route::get('/suratkeluar', [App\Http\Controllers\surat\SuratController::class, 'suratkeluar']);
+Route::get('/laporan', [App\Http\Controllers\surat\SuratController::class, 'laporan']);
+Route::get('/manajemenakun', [App\Http\Controllers\surat\SuratController::class, 'manajemenakun']);
+Route::get('/crtmasuk', [App\Http\Controllers\surat\SuratController::class, 'crtmasuk']);
+Route::get('/crtkeluar', [App\Http\Controllers\surat\SuratController::class, 'crtkeluar']);
