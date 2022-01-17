@@ -24,6 +24,7 @@
 </head>
 
 <!-- Background -->
+
 <body class="bg-sekolah">
 
     <div class="container">
