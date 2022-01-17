@@ -47,13 +47,13 @@
                                         <div class="form-group row">
                                             <label for="" class="col-2">Tanggal Masuk : </label>
                                             <div class="col-10">
-                                                <input class="form-control" type="text" name="" id="">
+                                                <input class="form-control" type="date" name="" id="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="" class="col-2">Tanggal Surat : </label>
                                             <div class="col-10">
-                                                <input class="form-control" type="text" name="" id="">
+                                                <input class="form-control" type="date" name="" id="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -75,7 +75,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-2">Perihal : </label>
+                                            <label for="" class="col-2">Lampiran : </label>
                                             <div class="col-10">
                                                 <input class="form-control" type="file" name="" id="">
                                             </div>
