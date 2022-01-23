@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\surat\SuratController;
+use App\Http\Controllers\SuratmasukController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,9 +24,12 @@ Auth::routes();
 Route::get('/masuk', [App\Http\Controllers\surat\SuratController::class, 'masuk']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\surat\SuratController::class, 'dashboard']);
-Route::get('/suratmasuk', [App\Http\Controllers\surat\SuratController::class, 'suratmasuk']);
+
+Route::get('/suratmasuk', [SuratmasukController::class, 'suratmasuk']);
 Route::get('/suratkeluar', [App\Http\Controllers\surat\SuratController::class, 'suratkeluar']);
 Route::get('/laporan', [App\Http\Controllers\surat\SuratController::class, 'laporan']);
 Route::get('/manajemenakun', [App\Http\Controllers\surat\SuratController::class, 'manajemenakun']);
-Route::get('/crtmasuk', [App\Http\Controllers\surat\SuratController::class, 'crtmasuk']);
+
+Route::get('/crtmasuk', [SuratmasukController::class, 'crtmasuk']);
+Route::post('/suratmasuk/crtmasuk', [SuratmasukController::class, 'simpan'])->name('crtmasuk.simpan');
 Route::get('/crtkeluar', [App\Http\Controllers\surat\SuratController::class, 'crtkeluar']);

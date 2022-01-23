@@ -42,48 +42,43 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Masukkan Surat Masuk</h6>
                                 </div>
                                 <!-- Card Body -->
-                                <div class="col-xl-12 col-lg-5 text-center mt-3 mb-3">
-                                    <form action="">
+                                <div class="col-xl-12 col-lg-5 text-left mt-3 mb-3">
+                                    <form section="{{ route('crtmasuk.simpan') }} method="POST">
+                                        @csrf
                                         <div class="form-group row">
-                                            <label for="" class="col-2">No Surat : </label>
+                                            <label for="" class="col-2 text-dark">Nomor Surat</label>
                                             <div class="col-10">
-                                                <input class="form-control" type="text" name="" id="">
+                                                <input class="form-control" type="text" name="nosurat" id="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-2">Tanggal Masuk : </label>
+                                            <label for="" class="col-2 text-dark">Tanggal Masuk Surat</label>
                                             <div class="col-10">
-                                                <input class="form-control" type="date" name="" id="">
+                                                <input class="form-control" type="date" name="tgl_masuk" id="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-2">Tanggal Surat : </label>
+                                            <label for="" class="col-2 text-dark">Tanggal Surat</label>
                                             <div class="col-10">
-                                                <input class="form-control" type="date" name="" id="">
+                                                <input class="form-control" type="date" name="tgl_surat" id="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-2">Pengirim : </label>
+                                            <label for="" class="col-2 text-dark">Asal Surat</label>
                                             <div class="col-10">
-                                                <input class="form-control" type="text" name="" id="">
+                                                <input class="form-control" type="text" name="asal" id="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-2">Perihal : </label>
+                                            <label for="" class="col-2 text-dark">Perihal</label>
                                             <div class="col-10">
-                                                <input class="form-control" type="text" name="" id="">
+                                                <input class="form-control" type="text" name="perihal" id="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-2">Isi : </label>
+                                            <label for="" class="col-2 text-dark">Lampiran</label>
                                             <div class="col-10">
-                                                <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="" class="col-2">Lampiran : </label>
-                                            <div class="col-10">
-                                                <input class="form-control" type="file" name="" id="">
+                                                <input class="form-control" type="file" name="lampiran" id="">
                                             </div>
                                         </div>
                                         <div class="form-group row">

@@ -16,10 +16,7 @@ class SuratController extends Controller
     {
         return view('surat/dashboard');
     }
-    public function suratmasuk()
-    {
-        return view('surat/suratmasuk');
-    }
+
     public function suratkeluar()
     {
         return view('surat/suratkeluar');
@@ -36,10 +33,7 @@ class SuratController extends Controller
     {
         return view('auth/masuk');
     }
-    public function crtmasuk()
-    {
-        return view('surat/crtmasuk');
-    }
+
     public function crtkeluar()
     {
         return view('surat/crtkeluar');
