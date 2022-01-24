@@ -3,6 +3,7 @@
 use App\Http\Controllers\surat\SuratController;
 use App\Http\Controllers\SuratmasukController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,5 @@ Route::get('/laporan', [App\Http\Controllers\surat\SuratController::class, 'lapo
 Route::get('/manajemenakun', [App\Http\Controllers\surat\SuratController::class, 'manajemenakun']);
 
 Route::get('/crtmasuk', [SuratmasukController::class, 'crtmasuk']);
-Route::post('/suratmasuk/crtmasuk', [SuratmasukController::class, 'simpan'])->name('crtmasuk.simpan');
+Route::post('/simpansuratmasuk', [App\Http\Controllers\SuratmasukController::class, 'store']);
 Route::get('/crtkeluar', [App\Http\Controllers\surat\SuratController::class, 'crtkeluar']);
