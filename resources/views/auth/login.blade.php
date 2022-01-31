@@ -69,8 +69,8 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="">Forgot Password?</a>
-                                        <a class="small" href="/dashboard">Masuk sebagai Tamu</a>
+                                        <a class="small" href="">Forgot Password?</a> <br>
+                                        <a class="large" href="/dashboard">Masuk sebagai Tamu</a>
                                     </div>
                                 </div>
                             </div>
