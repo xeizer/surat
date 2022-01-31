@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Suratmasuk;
+use App\srtmasuk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class SuratmasukController extends Controller
 {
@@ -13,7 +14,7 @@ class SuratmasukController extends Controller
         return view('suratmasuk/crtmasuk');
     }
 
-    public function simpan(Request $request)
+    public function store(Request $request)
     {
         $this->validate($request, [
             'nosurat' => 'required',
@@ -21,19 +22,25 @@ class SuratmasukController extends Controller
             'tgl_surat' => 'required',
             'asal' => 'required',
             'perihal' => 'required',
-            'lampiran' => 'mimes.png,jpg'
+            'lampiran' => 'image'
         ]);
-        $foto = time().".".$request->lampiran->extension();
-        $request->lampiran->move(public_path('lampiran'), $foto);
-        $simpan = new Suratmasuk();
-        $simpan->user_id = Auth::id();
-        $simpan->no_surat = $request->nosurat;
-        $simpan->tgl_masuk = $request->date('Y-m-d');
-        $simpan->tgl_surat = $request->date('Y-m-d');
-        $simpan->asal_surat = $request->asal;
-        $simpan->perihal = $foto;
-        $simpan->save();
-        return redirect()->suratmasuk();
+        $image = $request->image;
+        if ($image != null) {
+            $filename = time().'.'.request()->image->getClientOrOriginalExtension();
+            request()->image->move(public_path('lampiran'), $filename);
+        }
+
+        $suratmasuk = DB::table('suratmasuks')->create([
+            'user_id' => '1',
+            'no_surat' => $request->nosurat,
+            'tgl_masuk' => $request->tgl_masuk,
+            'tgl_surat' => $request->tgl_surat,
+            'asal_surat' => $request->asal,
+            'perihal' => $request->perihal,
+            'lampiran' => $filename??null,
+        ]);
+
+        return redirect('/suratmasuk');
     }
 
     public function suratmasuk()

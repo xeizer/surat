@@ -43,40 +43,40 @@
                                 </div>
                                 <!-- Card Body -->
                                 <div class="col-xl-12 col-lg-5 text-left mt-3 mb-3">
-                                    <form section="{{ route('crtmasuk.simpan') }} method="POST">
+                                    <form action="/simpansuratmasuk" method="POST">
                                         @csrf
                                         <div class="form-group row">
-                                            <label for="" class="col-2 text-dark">Nomor Surat</label>
+                                            <label for="nosurat" class="col-2 text-dark">Nomor Surat</label>
                                             <div class="col-10">
                                                 <input class="form-control" type="text" name="nosurat" id="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-2 text-dark">Tanggal Masuk Surat</label>
+                                            <label for="tgl_masuk" class="col-2 text-dark">Tanggal Masuk Surat</label>
                                             <div class="col-10">
                                                 <input class="form-control" type="date" name="tgl_masuk" id="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-2 text-dark">Tanggal Surat</label>
+                                            <label for="tgl_surat" class="col-2 text-dark">Tanggal Surat</label>
                                             <div class="col-10">
                                                 <input class="form-control" type="date" name="tgl_surat" id="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-2 text-dark">Asal Surat</label>
+                                            <label for="asal" class="col-2 text-dark">Asal Surat</label>
                                             <div class="col-10">
                                                 <input class="form-control" type="text" name="asal" id="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-2 text-dark">Perihal</label>
+                                            <label for="perihal" class="col-2 text-dark">Perihal</label>
                                             <div class="col-10">
                                                 <input class="form-control" type="text" name="perihal" id="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="" class="col-2 text-dark">Lampiran</label>
+                                            <label for="lampiran" class="col-2 text-dark">Lampiran</label>
                                             <div class="col-10">
                                                 <input class="form-control" type="file" name="lampiran" id="">
                                             </div>
