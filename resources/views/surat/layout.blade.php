@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('style.css')}}">
 
 </head>
 
@@ -77,6 +78,13 @@
                 <a class="nav-link collapsed" href="/laporan">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>LAPORAN</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/timkami">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>TIM PENGEMBANG</span>
                 </a>
             </li>
 
