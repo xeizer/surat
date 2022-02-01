@@ -25,7 +25,10 @@ class SuratmasukController extends Controller
             'perihal' => 'required',
         ], [
             'nosurat.required' => 'Nomor Surat Harus Di isi',
-            'tgl_masuk.required' => 'Tanggal  Harus Di isi',
+            'tgl_masuk.required' => 'Tanggal Harus Di isi',
+            'tgl_surat.required' => 'Tanggal Surat Harus Di isi',
+            'asal.required' => 'Asal Surat Harus Di isi',
+            'perihal.required' => 'Perihal Harus Di isi',
         ]);
         $image = $request->image;
         if ($image != null) {
@@ -48,6 +51,16 @@ class SuratmasukController extends Controller
 
     public function suratmasuk()
     {
-        return view('suratmasuk/suratmasuk');
+        $data = Suratmasuk::all();
+        return view('suratmasuk/suratmasuk')->with([
+            'data' => $data
+        ]);
+    }
+
+    public function destroy($data)
+    {
+        $destroy = Suratmasuk::findOrFail($data);
+        $destroy->delete();
+        return redirect()->route('#');
     }
 }
