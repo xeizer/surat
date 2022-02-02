@@ -80,7 +80,7 @@
                             <div class="form-group row">
                                 <label for="perihal" class="col-2 text-dark">Perihal</label>
                                 <div class="col-10">
-                                    <input class="form-control" type="text" name="perihal" id="">
+                                    <textarea class="form-control" rows="2" type="text" name="perihal" id=""></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">

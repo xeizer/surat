@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
 
 Auth::routes();
@@ -26,11 +26,14 @@ Route::get('/masuk', [App\Http\Controllers\surat\SuratController::class, 'masuk'
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\surat\SuratController::class, 'dashboard']);
 
-Route::get('/suratmasuk', [SuratmasukController::class, 'suratmasuk']);
 Route::get('/suratkeluar', [App\Http\Controllers\surat\SuratController::class, 'suratkeluar']);
-Route::get('/laporan', [App\Http\Controllers\surat\SuratController::class, 'laporan']);
+Route::get('/crtkeluar', [App\Http\Controllers\surat\SuratController::class, 'crtkeluar']);
+Route::get('/laporan',[App\Http\Controllers\LaporanController::class, 'laporan']);
 Route::get('/manajemenakun', [App\Http\Controllers\surat\SuratController::class, 'manajemenakun']);
 
+Route::get('/suratmasuk', [SuratmasukController::class, 'suratmasuk']);
 Route::get('/crtmasuk', [SuratmasukController::class, 'crtmasuk']);
 Route::post('/simpansuratmasuk', [App\Http\Controllers\SuratmasukController::class, 'store']);
-Route::get('/crtkeluar', [App\Http\Controllers\surat\SuratController::class, 'crtkeluar']);
+
+
+Route::get('/timkami', [App\Http\Controllers\TeamController::class, 'index']);

@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css')}}">
 
 </head>
 
@@ -77,6 +78,13 @@
                 <a class="nav-link collapsed" href="/laporan">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>LAPORAN</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/timkami">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>TIM PENGEMBANG</span>
                 </a>
             </li>
 
@@ -196,7 +204,9 @@
 
                 </nav>
                 <!-- End of Topbar -->
-                @yield('content')
+                <div style="min-height: 76.5vh">
+                    @yield('content')
+                </div>
 
             </div>
             <!-- End of Main Content -->
@@ -205,7 +215,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>UI by Oliver with <span class="fas fa-coffee"></span> 2021</span>
+                        <span>Copyright &copy; SURAT SDN 44</span>
                     </div>
                 </div>
             </footer>
@@ -243,6 +253,7 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
+    <script src="bootstrap.min.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
