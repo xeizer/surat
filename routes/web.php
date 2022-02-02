@@ -35,13 +35,10 @@ Route::get('/suratmasuk', [SuratmasukController::class, 'suratmasuk']);
 Route::get('/crtmasuk', [SuratmasukController::class, 'crtmasuk']);
 Route::post('/simpansuratmasuk', [App\Http\Controllers\SuratmasukController::class, 'store']);
 Route::get('/suratmasuk', [SuratmasukController::class, 'total']);
-<<<<<<< HEAD
 Route::get('/editsrtmasuk/{id}', [SuratmasukController::class, 'edit']);
 Route::post('/suratmasuk/edit/{id}', [SuratmasukController::class, 'update']);
-=======
 
 Route::get('/laporan',[App\Http\Controllers\LaporanController::class, 'laporan']);
 Route::get('/cetak',[App\Http\Controllers\LaporanController::class, 'cetak']);
->>>>>>> 6d7c7593d9b654a21f251b27f67c6117595d3358
 
 Route::get('/timkami', [App\Http\Controllers\TeamController::class, 'index']);
