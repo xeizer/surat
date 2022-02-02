@@ -57,10 +57,22 @@ class SuratmasukController extends Controller
         ]);
     }
 
+    public function edit($id)
+    {
+        # code...
+    }
+
     public function destroy($data)
     {
         $destroy = Suratmasuk::findOrFail($data);
         $destroy->delete();
         return redirect()->route('#');
+    }
+
+    public function total()
+    {
+        $data = Suratmasuk::all();
+        $count = DB::table('suratmasuks')->count();
+        return view('suratmasuk/suratmasuk', compact('data','count'));
     }
 }
