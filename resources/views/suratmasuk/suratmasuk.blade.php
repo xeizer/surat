@@ -66,7 +66,7 @@
                                                 <td>{{ $d->asal_surat }}</td>
                                                 <td>{{ $d->perihal }}</td>
                                                 <td>
-                                                    <a href="" class="btn btn-success">Edit</a>
+                                                    <a href="/editsrtmasuk/{{$d->id}}" class="btn btn-success">Edit</a>
                                                     <a href="#" class="btn btn-danger">Hapus</a>
                                                 </td>
                                             </tr>

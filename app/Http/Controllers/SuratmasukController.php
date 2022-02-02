@@ -59,7 +59,21 @@ class SuratmasukController extends Controller
 
     public function edit($id)
     {
-        # code...
+        $data = Suratmasuk::find($id);
+        return view('suratmasuk.crtmasukedit', compact('data'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = Suratmasuk::find($id);
+        $data->no_surat = $request->nosurat;
+        $data->tgl_masuk = $request->tgl_masuk;
+        $data->tgl_surat = $request->tgl_surat;
+        $data->asal_surat = $request->asal;
+        $data->perihal = $request->perihal;
+        $data->lampiran = $request->lampiran;
+        $data->update();
+        return redirect('/suratmasuk');
     }
 
     public function destroy($data)
