@@ -28,12 +28,13 @@ Route::get('/dashboard', [App\Http\Controllers\surat\SuratController::class, 'da
 
 Route::get('/suratkeluar', [App\Http\Controllers\surat\SuratController::class, 'suratkeluar']);
 Route::get('/crtkeluar', [App\Http\Controllers\surat\SuratController::class, 'crtkeluar']);
-Route::get('/laporan',[App\Http\Controllers\LaporanController::class, 'laporan']);
 Route::get('/manajemenakun', [App\Http\Controllers\surat\SuratController::class, 'manajemenakun']);
 
 Route::get('/suratmasuk', [SuratmasukController::class, 'suratmasuk']);
 Route::get('/crtmasuk', [SuratmasukController::class, 'crtmasuk']);
 Route::post('/simpansuratmasuk', [App\Http\Controllers\SuratmasukController::class, 'store']);
 
+Route::get('/laporan',[App\Http\Controllers\LaporanController::class, 'laporan']);
+Route::get('/cetak',[App\Http\Controllers\LaporanController::class, 'cetak']);
 
 Route::get('/timkami', [App\Http\Controllers\TeamController::class, 'index']);
