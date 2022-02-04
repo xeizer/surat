@@ -36,4 +36,5 @@ Route::get('/crtmasuk', [SuratmasukController::class, 'crtmasuk']);
 Route::post('/simpansuratmasuk', [App\Http\Controllers\SuratmasukController::class, 'store']);
 
 
+
 Route::get('/timkami', [App\Http\Controllers\TeamController::class, 'index']);
