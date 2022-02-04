@@ -17,7 +17,7 @@ class DataAwal extends Seeder
         User::create([
             'name' => 'Administrator',
             'email' => 'admin@admin.com',
-            'password' => bcrypt('1234567890')
+            'password' => bcrypt('1234567890'),
         ]);
     }
 }
