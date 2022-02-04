@@ -29,6 +29,12 @@ class timkamiController extends Controller
         return redirect('/timkami');
     }
     public function edit($id) {
-        
+
+    }
+    public function hapus($id) {
+        $tim = timkami::findorfail($id);
+        $tim->delete();
+
+        return redirect('/timkami');
     }
 }
