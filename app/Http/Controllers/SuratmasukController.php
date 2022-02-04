@@ -76,11 +76,11 @@ class SuratmasukController extends Controller
         return redirect('/suratmasuk');
     }
 
-    public function destroy($data)
+    public function destroy($id)
     {
-        $destroy = Suratmasuk::findOrFail($data);
+        $destroy = Suratmasuk::find($id);
         $destroy->delete();
-        return redirect()->route('#');
+        return redirect('/suratmasuk');
     }
 
     public function total()
