@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\surat;
 
 use App\Http\Controllers\Controller;
+use App\Models\Suratmasuk;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SuratController extends Controller
 {
@@ -14,7 +16,9 @@ class SuratController extends Controller
      */
     public function dashboard()
     {
-        return view('surat/dashboard');
+        $data = Suratmasuk::all();
+        $count = DB::table('suratmasuks')->count();
+        return view('surat/dashboard', compact('data','count'));
     }
 
     public function suratkeluar()

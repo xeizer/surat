@@ -67,7 +67,7 @@
                                                 <td>{{ $d->perihal }}</td>
                                                 <td>
                                                     <a href="/editsrtmasuk/{{$d->id}}" class="btn btn-success">Edit</a>
-                                                    <a href="#" class="btn btn-danger">Hapus</a>
+                                                    <a href="/destroy/{{$d->id}}" class="btn btn-danger">Hapus</a>
                                                 </td>
                                             </tr>
                                         </tbody>
