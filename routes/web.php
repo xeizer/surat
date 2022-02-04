@@ -36,7 +36,7 @@ Route::get('/crtmasuk', [SuratmasukController::class, 'crtmasuk']);
 Route::post('/simpansuratmasuk', [App\Http\Controllers\SuratmasukController::class, 'store']);
 Route::get('/suratmasuk', [SuratmasukController::class, 'total']);
 Route::get('/editsrtmasuk/{id}', [SuratmasukController::class, 'edit']);
-Route::post('/suratmasuk/edit/{id}', [SuratmasukController::class, 'update']);
+Route::post('/srtmasukupdate', [SuratmasukController::class, 'update']);
 Route::get('/destroy/{id}', [SuratmasukController::class, 'destroy']);
 
 Route::get('/laporan',[App\Http\Controllers\LaporanController::class, 'laporan']);

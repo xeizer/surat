@@ -33,7 +33,7 @@
                                 </ul>
                             </div>
                         @endif
-                        <form action="/simpansuratmasuk" method="POST">
+                        <form action="/simpansuratmasuk/{{$d->id}}" method="POST">
                             @csrf
                             <div class="form-group row">
                                 <label for="nosurat" class="col-2 text-dark">Nomor Surat</label>
