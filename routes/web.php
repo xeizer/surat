@@ -41,4 +41,7 @@ Route::post('/suratmasuk/edit/{id}', [SuratmasukController::class, 'update']);
 Route::get('/laporan',[App\Http\Controllers\LaporanController::class, 'laporan']);
 Route::get('/cetak',[App\Http\Controllers\LaporanController::class, 'cetak']);
 
-Route::get('/timkami', [App\Http\Controllers\TeamController::class, 'index']);
+// TIM KAMI
+Route::get('/timkami', [App\Http\Controllers\timkamiController::class, 'index']);
+Route::post('/timkami/upload', [App\Http\Controllers\timkamiController::class, 'upload']);
+Route::post('/timkami/edit', [App\Http\Controllers\timkamiController::class, 'edit']);

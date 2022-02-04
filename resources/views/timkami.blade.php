@@ -1,37 +1,54 @@
 @extends('surat/layout')
 @section('content')
+<style>
+    a[href=''] {
+        display: none;
+    }
+</style>
 <div class="container">
 <!-- IF Admin == True, show Add, Edit, Delete else IF Admin == False, hidden Add, Edit, Delete -->
     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#addPerson"><span class="fas fa-plus"></span> Add Person</button>
     <div class="row justify-content-center text-center">
         <!-- LOOP -->
+        @foreach ($timkami as $tim)
         <div class="col-3 m-3">
             <div class="card h-100" style="width: 250px;">
                 <img src="{{asset('foto/pp.jpg')}}" class="card-img-top ratio-1x1 rounded-circle mx-auto mt-3" style="width: 150px; height:auto">
                 <div class="card-body">
-                    <h5 class="card-title">Nama</h5>
-                    <p class="card-text">Jabatan</p>
-                    <div class="row justify-content-center">
+                    <h5 class="card-title">{{$tim->nama}}</h5>
+                    <p class="card-text">{{$tim->jabatan}}</p>
+                    <div class="row justify-content-center link-list-blablab">
                         <div class="col-2">
-                            <a href="#"><span class="fab fa-github"></span></a>
+                            <a href="{{$tim->github}}"><span class="fab fa-github"></span></a>
                         </div>
                         <div class="col-2">
-                            <a href="#"><span class="fab fa-facebook-f"></span></a>
+                            <a href="{{$tim->facebook}}"><span class="fab fa-facebook-f"></span></a>
+                            
                         </div>
                         <div class="col-2">
-                            <a href="#"><span class="fab fa-instagram"></span></a>
+                            <a href="{{$tim->instagram}}"><span class="fab fa-instagram"></span></a>
                         </div>
                         <div class="col-2">
-                            <a href="#"><span class="fab fa-youtube"></span></a>
+                            <a href="{{$tim->youtube}}"><span class="fab fa-youtube"></span></a>
                         </div>
                         <div class="col-2">
-                            <a href="#"><span class="fab fa-twitter"></span></a>
+                            <a href="{{$tim->twitter}}"><span class="fab fa-twitter"></span></a>
+                        </div>
+                        <div class="col-12 float-right mt-3 mb-1">
+                            <a href="/timkami/edit" class="btn btn-warning">Edit</a>
+                            <a href="" class="btn btn-danger">Hapus</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
         <!-- END LOOP -->
+        <script>
+            Array.from(document.querySelectorAll(".link-list-blablab a[href='']")).forEach(e => {
+                e.parentElement.style.display = "none"
+            })
+        </script>
     </div>
 </div>
 
@@ -46,22 +63,23 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form action="/timkami/upload" method="POST" id="up_timkami">
+            @csrf
             <div class="row m-1">
                 <div class="col-4">
-                    <label for="" class="col-sm-2 col-form-label">Nama</label>
+                    <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" name="" id="" class="form-control">
+                    <input type="text" name="nama" class="form-control">
                 </div>
             </div>
 
             <div class="row m-1">
                 <div class="col-4">
-                    <label for="" class="col-sm-2 col-form-label">Jabatan</label>
+                    <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" name="" id="" class="form-control">
+                    <input type="text" name="jabatan" class="form-control">
                 </div>
             </div>
             <div class="row m-1 mt-2">
@@ -208,7 +226,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-danger">Save changes</button>
+        <button type="submit" form="up_timkami" class="btn btn-danger">Save changes</button>
       </div>
     </div>
   </div>
