@@ -58,30 +58,22 @@
                                           </tr>
                                         </thead>
                                         <tbody>
-                                          <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">3</th>
-                                            <td colspan="2">Larry the Bird</td>
-                                            <td>@twitter</td>
-                                          </tr>
+                                            @foreach ($data as $d)
+                                            <tr>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $d->tgl_keluar }}</td>
+                                                <td>{{ $d->tgl_surat }}</td>
+                                                <td>{{ $d->no_surat }}</td>
+                                                <td>{{ $d->tujuan }}</td>
+                                                <td>{{ $d->perihal }}</td>
+                                                <td>{{ $d->isi }}</td>
+                                                <td>
+                                                    <a href="/editsrtkeluar/{{$d->id}}" class="btn btn-success">Edit</a>
+                                                    <a href="/destroy/{{$d->id}}" class="btn btn-danger">Hapus</a>
+                                                </td>
+                                            </tr>
                                         </tbody>
+                                        @endforeach
                                       </table>
                                 </div>
                             </div>

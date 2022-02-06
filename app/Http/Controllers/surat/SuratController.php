@@ -21,10 +21,7 @@ class SuratController extends Controller
         return view('surat/dashboard', compact('data','count'));
     }
 
-    public function suratkeluar()
-    {
-        return view('surat/suratkeluar');
-    }
+
     public function laporan()
     {
         return view('surat/laporan');
@@ -38,10 +35,7 @@ class SuratController extends Controller
         return view('auth/masuk');
     }
 
-    public function crtkeluar()
-    {
-        return view('surat/crtkeluar');
-    }
+
 
     /**
      * Show the form for creating a new resource.
