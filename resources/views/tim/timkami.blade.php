@@ -14,30 +14,30 @@
             <!-- LOOP -->
             <div class="card h-100" style="width: 250px;">
                 <img src="{{asset('foto/pp.jpg')}}" class="card-img-top ratio-1x1 rounded-circle mx-auto mt-3" style="width: 150px; height:auto">
-                <div class="card-body">
+                <div class="card-body" style="padding-bottom: 5rem;">
                     <h5 class="card-title">{{$tim->nama}}</h5>
                     <p class="card-text">{{$tim->jabatan}}</p>
-                    <div class="row justify-content-center link-list-blablab">
-                        <div class="col-2">
-                            <a href="{{$tim->github}}"><span class="fab fa-github"></span></a>
-                        </div>
-                        <div class="col-2">
-                            <a href="{{$tim->facebook}}"><span class="fab fa-facebook-f"></span></a>
-                            
-                        </div>
-                        <div class="col-2">
-                            <a href="{{$tim->instagram}}"><span class="fab fa-instagram"></span></a>
-                        </div>
-                        <div class="col-2">
-                            <a href="{{$tim->youtube}}"><span class="fab fa-youtube"></span></a>
-                        </div>
-                        <div class="col-2">
-                            <a href="{{$tim->twitter}}"><span class="fab fa-twitter"></span></a>
-                        </div>
-                        <div class="col-12 float-right mt-3 mb-1">
-                            <a href="/timkami/edit" class="btn btn-warning">Edit</a>
-                            <a href="/timkami/hapus" class="btn btn-danger">Hapus</a>
-                        </div>
+                        <div class="row justify-content-center position-absolute link-list-blablab"  style="left: 0; right:0; bottom: 0;">
+                            <div class="col-2">
+                                <a href="{{$tim->github}}"><span class="fab fa-github"></span></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="{{$tim->facebook}}"><span class="fab fa-facebook-f"></span></a>
+                                
+                            </div>
+                            <div class="col-2">
+                                <a href="{{$tim->instagram}}"><span class="fab fa-instagram"></span></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="{{$tim->youtube}}"><span class="fab fa-youtube"></span></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="{{$tim->twitter}}"><span class="fab fa-twitter"></span></a>
+                            </div>
+                            <div class="col-12 float-right mt-3 mb-2">
+                                <a href="/timkami/edit/{{$tim->id}}" class="btn btn-warning">Edit</a>
+                                <a href="/timkami/hapus/{{$tim->id}}" class="btn btn-danger">Hapus</a>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" name="nama" class="form-control">
+                    <input type="text" name="nama" class="form-control" placeholder="Nama Anda">
                 </div>
             </div>
 
@@ -80,7 +80,7 @@
                     <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" name="jabatan" class="form-control">
+                    <input type="text" name="jabatan" class="form-control" placeholder="Jabatan/Gelar Anda">
                 </div>
             </div>
             <div class="row m-1 mt-2">
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="col-8">
-                    <input type="text" name="github" disabled id="field1" class="form-control" placeholder="https://github.com/yourname">
+                    <input type="text" name="github" disabled id="field1" class="form-control" placeholder="url github anda (https://www.github.com)">
                 </div>
             </div>
 
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <div class="col-8">
-                    <input type="text" name="facebook" disabled id="field2" class="form-control" placeholder="https://facebook.com/yourname">
+                    <input type="text" name="facebook" disabled id="field2" class="form-control" placeholder="url facebook anda (https://www.facebook.com)">
                 </div>
             </div>
 
@@ -145,7 +145,7 @@
                     </div>
                 </div>
                 <div class="col-8">
-                    <input type="text" name="instagram" disabled id="field3" class="form-control" placeholder="https://instagram.com/yourname">
+                    <input type="text" name="instagram" disabled id="field3" class="form-control" placeholder="url instagram anda (https://www.instagram.com)">
                 </div>
             </div>
 
@@ -171,7 +171,7 @@
                     </div>
                 </div>
                 <div class="col-8">
-                    <input type="text" name="youtube" disabled id="field4" class="form-control" placeholder="https://youtube.com/yourname">
+                    <input type="text" name="youtube" disabled id="field4" class="form-control" placeholder="url youtube anda (https://www.youtube.com)">
                 </div>
             </div>
 
@@ -197,7 +197,7 @@
                     </div>
                 </div>
                 <div class="col-8">
-                    <input type="text" name="twitter" disabled id="field5" class="form-control" placeholder="https://twitter.com/yourname">
+                    <input type="text" name="twitter" disabled id="field5" class="form-control" placeholder="url twitter anda (https://www.twitter.com)">
                 </div>
             </div>
 
@@ -218,7 +218,7 @@
                 </div>
                 <div class="col-8">
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
+                        <input type="file" class="custom-file-input" name="foto_profil" id="customFile">
                         <label class="custom-file-label" for="customFile">Choose file</label>
                     </div>
                 </div>

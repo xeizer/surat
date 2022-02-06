@@ -22,7 +22,7 @@ class CreateTimkamiTable extends Migration
             $table->string('instagram')->nullable();
             $table->string('youtube')->nullable();
             $table->string('twitter')->nullable();
-            $table->string('foto_profil');
+            $table->string('foto_profil')->nullable();
             $table->timestamps();
         });
     }
