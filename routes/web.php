@@ -28,13 +28,22 @@ Route::get('/dashboard', [App\Http\Controllers\surat\SuratController::class, 'da
 
 Route::get('/suratkeluar', [App\Http\Controllers\surat\SuratController::class, 'suratkeluar']);
 Route::get('/crtkeluar', [App\Http\Controllers\surat\SuratController::class, 'crtkeluar']);
-Route::get('/laporan',[App\Http\Controllers\LaporanController::class, 'laporan']);
 Route::get('/manajemenakun', [App\Http\Controllers\surat\SuratController::class, 'manajemenakun']);
 
+//Surat Masuk
 Route::get('/suratmasuk', [SuratmasukController::class, 'suratmasuk']);
 Route::get('/crtmasuk', [SuratmasukController::class, 'crtmasuk']);
 Route::post('/simpansuratmasuk', [App\Http\Controllers\SuratmasukController::class, 'store']);
+Route::get('/suratmasuk', [SuratmasukController::class, 'total']);
+Route::get('/editsrtmasuk/{id}', [SuratmasukController::class, 'edit']);
+Route::post('/srtmasukupdate', [SuratmasukController::class, 'update']);
+Route::get('/destroy/{id}', [SuratmasukController::class, 'destroy']);
 
+Route::get('/laporan',[App\Http\Controllers\LaporanController::class, 'laporan']);
+Route::get('/cetak',[App\Http\Controllers\LaporanController::class, 'cetak']);
 
-
-Route::get('/timkami', [App\Http\Controllers\TeamController::class, 'index']);
+// TIM KAMI
+Route::get('/timkami', [App\Http\Controllers\timkamiController::class, 'index']);
+Route::post('/timkami/upload', [App\Http\Controllers\timkamiController::class, 'upload']);
+Route::post('/timkami/edit', [App\Http\Controllers\timkamiController::class, 'edit']);
+Route::post('/timkami/hapus', [App\Http\Controllers\timkamiController::class, 'hapus']);

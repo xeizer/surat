@@ -57,10 +57,36 @@ class SuratmasukController extends Controller
         ]);
     }
 
-    public function destroy($data)
+    public function edit($id)
     {
-        $destroy = Suratmasuk::findOrFail($data);
+        $data = Suratmasuk::find($id);
+        return view('suratmasuk.crtmasukedit', compact('data'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = Suratmasuk::find($id);
+        $data->no_surat = $request->nosurat;
+        $data->tgl_masuk = $request->tgl_masuk;
+        $data->tgl_surat = $request->tgl_surat;
+        $data->asal_surat = $request->asal;
+        $data->perihal = $request->perihal;
+        $data->lampiran = $request->lampiran;
+        $data->update();
+        return redirect('/suratmasuk');
+    }
+
+    public function destroy($id)
+    {
+        $destroy = Suratmasuk::find($id);
         $destroy->delete();
-        return redirect()->route('#');
+        return redirect('/suratmasuk');
+    }
+
+    public function total()
+    {
+        $data = Suratmasuk::all();
+        $count = DB::table('suratmasuks')->count();
+        return view('suratmasuk/suratmasuk', compact('data','count'));
     }
 }

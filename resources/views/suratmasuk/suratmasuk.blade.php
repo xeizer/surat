@@ -19,7 +19,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Surat Masuk</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">90</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $count }}</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-envelope fa-2x text-gray-300"></i>
@@ -66,8 +66,8 @@
                                                 <td>{{ $d->asal_surat }}</td>
                                                 <td>{{ $d->perihal }}</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-success">Edit</a>
-                                                    <a href="#" class="btn btn-danger">Hapus</a>
+                                                    <a href="/editsrtmasuk/{{$d->id}}" class="btn btn-success">Edit</a>
+                                                    <a href="/destroy/{{$d->id}}" class="btn btn-danger">Hapus</a>
                                                 </td>
                                             </tr>
                                         </tbody>

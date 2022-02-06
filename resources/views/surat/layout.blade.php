@@ -18,8 +18,8 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+    <link href="{{asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 </head>
 
@@ -64,10 +64,11 @@
                     <i class="fas fa-fw fa-folder"></i>
                     <span>ARSIP SURAT</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">OPSI :</h6>
-                        <a class="collapse-item" href="/suratmasuk">Surat Masuk</a>
+                        <a class="collapse-item" href="{{ url('/suratmasuk') }}">Surat Masuk</a>
                         <a class="collapse-item" href="/suratkeluar">Surat Keluar</a>
                     </div>
                 </div>
@@ -103,7 +104,8 @@
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Manajemen Akun</span>
                 </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!-- mengambil role user, dan ditampilkan disini -->
                         <a class="collapse-item" href="/manajemenakun">Akun</a>
@@ -174,8 +176,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <!-- get user name from table -->
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nama Akun</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -246,29 +247,29 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="{{ route('logout')}}">Logout</a>
+                    <a class="btn btn-primary" href="{{ route('logout') }}">Logout</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="bootstrap.min.js"></script>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('bootstrap.min.js') }}"></script>
+    <script src="{{asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="{{asset('js/sb-admin-2.min.js') }}"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="{{asset('vendor/chart.js/Chart.min.js') }}"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="{{asset('js/demo/chart-area-demo.js') }}"></script>
+    <script src="{{asset('js/demo/chart-pie-demo.js') }}"></script>
 
 </body>
 

@@ -20,7 +20,23 @@ class LaporanController extends Controller
         $csurma = DB::table('suratmasuks')->count();
         // $surke = Suratkeluar::all();
         // $csurke = DB::table('suratkeluars')->count();
+        // $cetak =
         return view('laporan/laporan', compact('surma','csurma'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function cetak()
+    {
+        $surma = Suratmasuk::all();
+        $csurma = DB::table('suratmasuks')->count();
+        // $surke = Suratkeluar::all();
+        // $csurke = DB::table('suratkeluars')->count();
+        // $cetak =
+        return view('laporan/cetak', compact('surma','csurma'));
     }
 
     /**
