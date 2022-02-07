@@ -57,17 +57,17 @@
                                           </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($data as $d)
+                                            @foreach ($data as $dm)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $d->tgl_masuk }}</td>
-                                                <td>{{ $d->tgl_surat }}</td>
-                                                <td>{{ $d->no_surat }}</td>
-                                                <td>{{ $d->asal_surat }}</td>
-                                                <td>{{ $d->perihal }}</td>
+                                                <td>{{ $dm->tgl_masuk }}</td>
+                                                <td>{{ $dm->tgl_surat }}</td>
+                                                <td>{{ $dm->no_surat }}</td>
+                                                <td>{{ $dm->asal_surat }}</td>
+                                                <td>{{ $dm->perihal }}</td>
                                                 <td>
-                                                    <a href="/editsrtmasuk/{{$d->id}}" class="btn btn-success">Edit</a>
-                                                    <a href="/destroy/{{$d->id}}" class="btn btn-danger">Hapus</a>
+                                                    <a href="/editsrtmasuk/{{$dm->id}}" class="btn btn-success">Edit</a>
+                                                    <a href="/destroy/{{$dm->id}}" class="btn btn-danger">Hapus</a>
                                                 </td>
                                             </tr>
                                         </tbody>

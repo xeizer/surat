@@ -21,7 +21,6 @@ class CreateSuratkeluarsTable extends Migration
             $table->date('tgl_surat');
             $table->text('tujuan');
             $table->text('perihal');
-            $table->text('isi');
             $table->string('lampiran')->nullable();
             $table->timestamps();
         });

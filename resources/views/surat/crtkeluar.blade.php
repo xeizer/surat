@@ -75,13 +75,7 @@
                                         <div class="form-group row">
                                             <label for="perihal" class="col-2">Perihal : </label>
                                             <div class="col-10">
-                                                <input class="form-control" type="text" name="perihal" id="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="isi" class="col-2">Isi : </label>
-                                            <div class="col-10">
-                                                <textarea class="form-control" name="isi" id="" cols="30" rows="10"></textarea>
+                                                <textarea class="form-control" rows="2" type="text" name="perihal" id=""></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group row">

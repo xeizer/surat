@@ -43,7 +43,6 @@ class SuratkeluarController extends Controller
             'tgl_surat' => $request->tgl_surat,
             'tujuan' => $request->tujuan,
             'perihal' => $request->perihal,
-            'isi' => $request->isi,
             'lampiran' => $filename ?? null,
         ]);
 
