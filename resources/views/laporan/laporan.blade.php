@@ -38,7 +38,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Surat keluar</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">90</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $csurke }}</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-envelope fa-2x text-gray-300"></i>
@@ -114,30 +114,17 @@
                                           </tr>
                                         </thead>
                                         <tbody>
-                                          <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">3</th>
-                                            <td colspan="2">Larry the Bird</td>
-                                            <td>@twitter</td>
-                                          </tr>
+                                            @foreach ($surke as $d)
+                                            <tr>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $d->tgl_masuk }}</td>
+                                                <td>{{ $d->tgl_surat }}</td>
+                                                <td>{{ $d->no_surat }}</td>
+                                                <td>{{ $d->asal_surat }}</td>
+                                                <td>{{ $d->perihal }}</td>
+                                            </tr>
                                         </tbody>
+                                        @endforeach
                                       </table>
                                 </div>
                             </div>

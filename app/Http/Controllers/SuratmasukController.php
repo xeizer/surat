@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Suratmasuk;
+use App\Models\Suratmasuk; 
 use App\srtmasuk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Suratmasuk;
+use App\Models\Suratkeluar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -18,10 +19,10 @@ class LaporanController extends Controller
     {
         $surma = Suratmasuk::all();
         $csurma = DB::table('suratmasuks')->count();
-        // $surke = Suratkeluar::all();
-        // $csurke = DB::table('suratkeluars')->count();
+        $surke = Suratkeluar::all();
+        $csurke = DB::table('suratkeluars')->count();
         // $cetak =
-        return view('laporan/laporan', compact('surma','csurma'));
+        return view('laporan/laporan', compact('surma','csurma','surke','csurke'));
     }
 
     /**

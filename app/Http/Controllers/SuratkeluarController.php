@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Suratkeluar;
 use App\srtkeluar;
-use Illuminate\Http\Request;
+use Illuminate\Http\Request; 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
