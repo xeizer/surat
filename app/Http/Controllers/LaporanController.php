@@ -21,7 +21,6 @@ class LaporanController extends Controller
         $csurma = DB::table('suratmasuks')->count();
         $surke = Suratkeluar::all();
         $csurke = DB::table('suratkeluars')->count();
-        // $cetak =
         return view('laporan/laporan', compact('surma','csurma','surke','csurke'));
     }
 
@@ -34,32 +33,11 @@ class LaporanController extends Controller
     {
         $surma = Suratmasuk::all();
         $csurma = DB::table('suratmasuks')->count();
-        // $surke = Suratkeluar::all();
-        // $csurke = DB::table('suratkeluars')->count();
-        // $cetak =
-        return view('laporan/cetak', compact('surma','csurma'));
+        $surke = Suratkeluar::all();
+        $csurke = DB::table('suratkeluars')->count();
+        return view('laporan/cetak', compact('surma','csurma','surke','csurke'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+
 }

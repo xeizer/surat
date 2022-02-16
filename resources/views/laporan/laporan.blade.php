@@ -6,7 +6,8 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Laporan</h1>
-                    <a href="/cetak" class="btn btn-danger">Print Laporan</a>
+                    <a href="/cetak" target="_blank" class="btn btn-danger">Print Laporan</a>
+
                     </div>
 
                     <!-- Content Row -->
@@ -132,4 +133,6 @@
                     </div>
                 </div>
                 <!-- /.container-fluid -->
+
+
 @endsection
