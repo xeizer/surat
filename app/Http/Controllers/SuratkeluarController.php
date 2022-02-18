@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Suratkeluar;
 use App\srtkeluar;
-use Illuminate\Http\Request; 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -61,7 +61,14 @@ class SuratkeluarController extends Controller
     {
         $destroy = Suratkeluar::findOrFail($data);
         $destroy->delete();
-        return redirect()->route('#');
+        return redirect()->route('/suratkeluar');
+    }
+
+    public function total()
+    {
+        $data = Suratkeluar::all();
+        $count = DB::table('suratkeluars')->count();
+        return view('surat/suratkeluar', compact('data','count'));
     }
 }
 

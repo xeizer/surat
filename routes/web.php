@@ -42,6 +42,7 @@ Route::get('/destroy/{id}', [SuratmasukController::class, 'destroy']);
 Route::get('/suratkeluar', [SuratkeluarController::class, 'suratkeluar']);
 Route::get('/crtkeluar', [SuratkeluarController::class, 'crtkeluar']);
 Route::post('/simpansuratkeluar', [App\Http\Controllers\SuratkeluarController::class, 'store']);
+Route::get('/suratkeluar', [SuratkeluarController::class, 'total']);
 
 Route::get('/laporan',[App\Http\Controllers\LaporanController::class, 'laporan']);
 Route::get('/cetak',[App\Http\Controllers\LaporanController::class, 'cetak']);
