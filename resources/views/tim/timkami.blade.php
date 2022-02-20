@@ -7,12 +7,12 @@
 </style>
 <div class="container">
 <!-- IF Admin == True, show Add, Edit, Delete else IF Admin == False, hidden Add, Edit, Delete -->
-    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#addPerson"><span class="fas fa-plus"></span> Add Person</button>
+    <!-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#addPerson"><span class="fas fa-plus"></span> Add Person</button> -->
     <div class="row justify-content-center text-center">
-        @foreach ($timkami as $tim)
-        <div class="col-3 m-3">
+        <!-- @foreach ($timkami as $tim)
+        <div class="col-3 m-3"> -->
             <!-- LOOP -->
-            <div class="card h-100" style="width: 250px;">
+            <!-- <div class="card h-100" style="width: 250px;">
                 <img src="{{asset('foto/pp.jpg')}}" class="card-img-top ratio-1x1 rounded-circle mx-auto mt-3" style="width: 150px; height:auto">
                 <div class="card-body" style="padding-bottom: 5rem;">
                     <h5 class="card-title">{{$tim->nama}}</h5>
@@ -40,10 +40,96 @@
                             </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- END LOOP -->
+        <!-- </div>
+        @endforeach -->
+        
+        <!-- LOOP -->
+        <div class="col-3 m-3">
+            <div class="card h-100" style="width: 250px;">
+                <img src="{{asset('foto/pp_olv.jpg')}}" class="card-img-top ratio-1x1 rounded-circle mx-auto mt-3" style="width: 150px; height:auto">
+                <div class="card-body" style="padding-bottom: 5rem;">
+                    <h5 class="card-title">Oliver Dillon</h5>
+                    <p class="card-text">UI / UX</p>
+                        <div class="row justify-content-center position-absolute link-list-blablab"  style="left: 0; right:0; bottom: 0;">
+                            <div class="col-2">
+                                <a href="https://github.com/oliv-e/"><span class="fab fa-github"></span></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://facebook.com/CLEOFACT/"><span class="fab fa-facebook-f"></span></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://instagram.com/oliverkore/"><span class="fab fa-instagram"></span></a>
+                            </div>
+                            <div class="col-12 float-right mt-3 mb-2">
+                            </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        @endforeach
+
+        <div class="col-3 m-3">
+            <div class="card h-100" style="width: 250px;">
+                <img src="{{asset('foto/pp.jpg')}}" class="card-img-top ratio-1x1 rounded-circle mx-auto mt-3" style="width: 150px; height:auto">
+                <div class="card-body" style="padding-bottom: 5rem;">
+                    <h5 class="card-title">Raden Roro Wardatul Unsiyah</h5>
+                    <p class="card-text">Laporan</p>
+                        <div class="row justify-content-center position-absolute link-list-blablab"  style="left: 0; right:0; bottom: 0;">
+                            
+                            <div class="col-12 float-right mt-3 mb-2">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 m-3">
+            <div class="card h-100" style="width: 250px;">
+                <img src="{{asset('foto/pp.jpg')}}" class="card-img-top ratio-1x1 rounded-circle mx-auto mt-3" style="width: 150px; height:auto">
+                <div class="card-body" style="padding-bottom: 5rem;">
+                    <h5 class="card-title">Ronny Aprilianto</h5>
+                    <p class="card-text">Surat Masuk</p>
+                        <div class="row justify-content-center position-absolute link-list-blablab"  style="left: 0; right:0; bottom: 0;">
+                            
+                            <div class="col-12 float-right mt-3 mb-2">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 m-3">
+            <div class="card h-100" style="width: 250px;">
+                <img src="{{asset('foto/pp.jpg')}}" class="card-img-top ratio-1x1 rounded-circle mx-auto mt-3" style="width: 150px; height:auto">
+                <div class="card-body" style="padding-bottom: 5rem;">
+                    <h5 class="card-title">Fuadi Ahsin</h5>
+                    <p class="card-text">Surat Keluar</p>
+                        <div class="row justify-content-center position-absolute link-list-blablab"  style="left: 0; right:0; bottom: 0;">
+
+                            <div class="col-12 float-right mt-3 mb-2">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 m-3">
+            <div class="card h-100" style="width: 250px;">
+                <img src="{{asset('foto/pp.jpg')}}" class="card-img-top ratio-1x1 rounded-circle mx-auto mt-3" style="width: 150px; height:auto">
+                <div class="card-body" style="padding-bottom: 5rem;">
+                    <h5 class="card-title">Ratu Maharani</h5>
+                    <p class="card-text">Login</p>
+                        <div class="row justify-content-center position-absolute link-list-blablab"  style="left: 0; right:0; bottom: 0;">
+
+                            <div class="col-12 float-right mt-3 mb-2">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END LOOP -->
     </div>
         
         <script>
