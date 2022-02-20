@@ -45,15 +45,25 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Selamat datang di Aplikasi Surat Menyurat SDN44!</h1>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" method="POST" action="{{ route('login') }}">
+                                        @csrf
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address...">
+                                            <input type="email" class="form-control @error('email') is-invalid @enderror form-control-user"
+                                                id="email" placeholder="Enter Email Address..." name="email">
+                                                @error('email')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                            <input type="password" class="form-control @error('password') is-invalid @enderror form-control-user"
+                                                id="password" placeholder="Password" name="password">
+                                                @error('password')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -62,15 +72,13 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <!-- LOGIN -->
-                                        <a href="index.html" class="btn btn-danger btn-user btn-block">
+                                        <button type="submit" class="btn btn-danger btn-user btn-block">
                                             Login
-                                        </a>
+                                        </button>
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="">Forgot Password?</a> <br>
-                                        <a class="large" href="/dashboard">Masuk sebagai Tamu</a>
+                                        <a class="small" href="{{ route('password.request') }}">Forgot Password?</a>
                                     </div>
                                 </div>
                             </div>

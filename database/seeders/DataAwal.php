@@ -18,6 +18,7 @@ class DataAwal extends Seeder
             'name' => 'Administrator',
             'email' => 'admin@admin.com',
             'password' => bcrypt('1234567890'),
+            'role' => 'admin',
         ]);
     }
 }

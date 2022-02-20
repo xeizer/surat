@@ -90,13 +90,14 @@
             </li>
 
             <!-- Divider -->
+            <!-- if user == admin, tampilkan else blank -->
+            @if (Auth::user()->role == 'admin')
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
                 Admin
             </div>
-            <!-- if user == admin, tampilkan else blank -->
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -107,11 +108,12 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <!-- mengambil role user, dan ditampilkan disini -->
-                        <a class="collapse-item" href="/manajemenakun">Akun</a>
+                        <a class="collapse-item" href="/manajemenakun">Daftar Akun</a>
+                        <a class="collapse-item" href="/admintambahakun">Tambah Akun</a>
                     </div>
                 </div>
             </li>
+            @endif
         </ul>
         <!-- End of Sidebar -->
 
@@ -175,13 +177,13 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <!-- get user name from table -->
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nama Akun</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="/profil">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -247,7 +249,12 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="{{ route('logout') }}">Logout</a>
+                    <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        logout
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                    </form>
                 </div>
             </div>
         </div>

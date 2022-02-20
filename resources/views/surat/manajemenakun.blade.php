@@ -9,28 +9,6 @@
                     </div>
 
                     <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Surat Masuk -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Manajemen Akun</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">90</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-user fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
 
                     <div class="row">
                         <!-- Pie Chart -->
@@ -40,7 +18,7 @@
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Table Akun</h6>
-                                    <a href="" class="btn btn-danger">+ Akun</a>
+                                    <a href="/admintambahakun" class="btn btn-danger">+ Akun</a>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -55,13 +33,18 @@
                                           </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($user as $u)
                                           <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td>@mdo</td>
+                                            <th scope="row">{{ $loop->iteration }}</th>
+                                            <td>{{ $u->name }}</td>
+                                            <td>{{ $u->email }}</td>
+                                            <td>{{ $u->role }}</td>
+                                            <td>
+                                                <a href="/adminedit/{{$u->id}}" class="btn btn-success">Edit</a>
+                                                <a href="/adminhapus/{{$u->id}}" class="btn btn-danger">Hapus</a>
+                                            </td>
                                           </tr>
+                                            @endforeach
                                         </tbody>
                                       </table>
                                 </div>

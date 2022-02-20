@@ -28,7 +28,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/dashboard', [App\Http\Controllers\surat\SuratController::class, 'dashboard']);
 
 
-Route::get('/manajemenakun', [App\Http\Controllers\surat\SuratController::class, 'manajemenakun']);
+Route::get('/manajemenakun', [App\Http\Controllers\admin\AdminController::class, 'manajemenakun']);
+Route::get('/admintambahakun',[App\Http\Controllers\admin\AdminController::class, 'index']);
+Route::post('/adminsimpanakun',[App\Http\Controllers\admin\AdminController::class, 'create']);
+Route::get('/adminedit/{id}',[App\Http\Controllers\admin\AdminController::class, 'adminedit']);
+Route::post('/admineditakun/{id}',[App\Http\Controllers\admin\AdminController::class, 'adminupdate']);
+Route::get('/adminhapus/{id}', [App\Http\Controllers\admin\AdminController::class, 'destroy']);
 
 //Surat Masuk
 Route::get('/suratmasuk', [SuratmasukController::class, 'suratmasuk']);
