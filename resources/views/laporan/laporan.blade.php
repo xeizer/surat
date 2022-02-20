@@ -105,23 +105,21 @@
                                         <thead>
                                           <tr>
                                             <th scope="col">No</th>
-                                            <th scope="col">Tanggal Masuk Surat</th>
+                                            <th scope="col">Tanggal Keluar Surat</th>
                                             <th scope="col">Tanggal Surat</th>
                                             <th scope="col">Nomor Surat</th>
-                                            <th scope="col">Pengirim</th>
+                                            <th scope="col">Tujuan</th>
                                             <th scope="col">Perihal</th>
-                                            <th scope="col">Isi Surat</th>
-                                            <th scope="col">Action</th>
                                           </tr>
                                         </thead>
                                         <tbody>
                                             @foreach ($surke as $d)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $d->tgl_masuk }}</td>
+                                                <td>{{ $d->tgl_keluar }}</td>
                                                 <td>{{ $d->tgl_surat }}</td>
                                                 <td>{{ $d->no_surat }}</td>
-                                                <td>{{ $d->asal_surat }}</td>
+                                                <td>{{ $d->tujuan }}</td>
                                                 <td>{{ $d->perihal }}</td>
                                             </tr>
                                         </tbody>
