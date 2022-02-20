@@ -83,10 +83,8 @@
                                 <th scope="col">Tanggal Masuk Surat</th>
                                 <th scope="col">Tanggal Surat</th>
                                 <th scope="col">Nomor Surat</th>
-                                <th scope="col">Pengirim</th>
+                                <th scope="col">Asal Surat</th>
                                 <th scope="col">Perihal</th>
-                                <th scope="col">Isi Surat</th>
-                                <th scope="col">Action</th>
                               </tr>
                             </thead>
                             <tbody>
