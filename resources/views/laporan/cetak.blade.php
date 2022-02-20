@@ -23,8 +23,9 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 pt-3">
             <h1 class="h3 mb-0 text-gray-800">Laporan</h1>
+            <button class="btn btn-danger" onclick="window.print()"> Print Laporan</button>
         </div>
 
         <div class="row">
