@@ -43,8 +43,8 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="/dashboard">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -69,21 +69,21 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">OPSI :</h6>
                         <a class="collapse-item" href="{{ url('/suratmasuk') }}">Surat Masuk</a>
-                        <a class="collapse-item" href="/suratkeluar">Surat Keluar</a>
+                        <a class="collapse-item" href="{{ url('/suratkeluar') }}">Surat Keluar</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/laporan">
+                <a class="nav-link collapsed" href="{{ url('/laporan') }}">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>LAPORAN</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/timkami">
+                <a class="nav-link collapsed" href="{{ url('/timkami') }}">
                     <i class="fas fa-fw fa-users"></i>
                     <span>TIM PENGEMBANG</span>
                 </a>
@@ -108,8 +108,8 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="/manajemenakun">Daftar Akun</a>
-                        <a class="collapse-item" href="/admintambahakun">Tambah Akun</a>
+                        <a class="collapse-item" href="{{ url('/manajemenakun') }}">Daftar Akun</a>
+                        <a class="collapse-item" href="{{ url('/admintambahakun') }}">Tambah Akun</a>
                     </div>
                 </div>
             </li>
@@ -183,7 +183,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="/profil">
+                                <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>

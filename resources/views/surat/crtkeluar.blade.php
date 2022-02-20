@@ -46,7 +46,7 @@
                                         </ul>
                                     </div>
                                     @endif
-                                    <form action="/simpansuratkeluar"  method="POST">
+                                    <form action="{{ url('/simpansuratkeluar') }}" method="POST">
                                         @csrf
                                         <div class="form-group row">
                                             <label for="nosurat" class="col-2">No Surat : </label>

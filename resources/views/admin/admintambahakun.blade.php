@@ -33,7 +33,7 @@
                                 </ul>
                             </div>
                         @endif
-                        <form action="/adminsimpanakun" method="POST">
+                        <form action="{{ url('/adminsimpanakun') }}" method="POST">
                             @csrf
                             <div class="form-group row">
                                 <label for="name" class="col-2 text-dark">Nama</label>

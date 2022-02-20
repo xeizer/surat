@@ -18,7 +18,7 @@
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Table Akun</h6>
-                                    <a href="/admintambahakun" class="btn btn-danger">+ Akun</a>
+                                    <a href="{{ url('/admintambahakun') }}" class="btn btn-danger">+ Akun</a>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">

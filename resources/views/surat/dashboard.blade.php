@@ -61,21 +61,21 @@
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Laporan</h6>
                                     <div class="no arrow">
-                                        <a href="/laporan" class="btn btn-danger">Laporan</a>
+                                        <a href="{{ url('/laporan') }}" class="btn btn-danger">Laporan</a>
                                     </div>
                                 </div>
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Table Surat Masuk</h6>
                                     <div class="no arrow">
-                                        <a href="/suratmasuk" class="btn btn-danger">Surat Masuk</a>
+                                        <a href="{{ url('/suratmasuk') }}" class="btn btn-danger">Surat Masuk</a>
                                     </div>
                                 </div>
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Table Surat Keluar</h6>
                                     <div class="no arrow">
-                                        <a href="/suratkeluar" class="btn btn-danger">Surat Keluar</a>
+                                        <a href="{{ url('/suratkeluar') }}" class="btn btn-danger">Surat Keluar</a>
                                     </div>
                                 </div>
                                 @if (Auth::user()->role == 'admin')
@@ -83,14 +83,14 @@
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Table Akun</h6>
                                     <div class="no arrow">
-                                        <a href="/manajemenakun" class="btn btn-danger">Akun</a>
+                                        <a href="{{ url('/manajemenakun') }}" class="btn btn-danger">Akun</a>
                                     </div>
                                 </div>
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Tambah Akun</h6>
                                     <div class="no arrow">
-                                        <a href="/admintambahakun" class="btn btn-danger">Tambah Akun</a>
+                                        <a href="{{ url('/admintambahakun') }}" class="btn btn-danger">Tambah Akun</a>
                                     </div>
                                 </div>
                                 @endif

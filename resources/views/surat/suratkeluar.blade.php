@@ -40,7 +40,7 @@
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Table Surat Keluar</h6>
-                                    <a href="/crtkeluar" class="btn btn-danger">+ Surat Keluar</a>
+                                    <a href="{{ url('/crtkeluar') }}" class="btn btn-danger">+ Surat Keluar</a>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
